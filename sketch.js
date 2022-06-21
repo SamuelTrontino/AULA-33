@@ -64,11 +64,11 @@ function setup() {
   engine = Engine.create();
   world = engine.world;
   ground = new Ground(200, 680, 600, 20);
-  corda = new Rope(5, { x: width/2, y: 30 })
+  corda = new Rope(3, { x: width/2, y: 30 })
   corda2 = new Rope(5, { x: width/2+210, y: 100 })
   corda3 = new Rope(5, { x: width/2-200, y: 100 })
   
-  fruta = Bodies.circle(width/2,150,20)
+  fruta = Bodies.circle(width/2,200,20)
   Composite.add(corda.body,fruta)
   ligacao = new Ligacao(corda,fruta)
   ligacao2 = new Ligacao(corda2,fruta)
@@ -150,6 +150,7 @@ corda.break()
 ligacao.soltar()
 ligacao=null
 cordaM.play()
+
 }
 
 function cortar2(){
